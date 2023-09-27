@@ -19,3 +19,8 @@ spring:
           destination: jp-cloud-stream-squares
         consumer-in-0:
           destination: jp-cloud-stream-squares
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics

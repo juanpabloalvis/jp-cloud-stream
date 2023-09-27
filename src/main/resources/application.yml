@@ -1,0 +1,21 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: jp-cloud-stream
+  cloud:
+    function:
+      definition:
+        toUppercase;producer;processor;consumer
+    stream:
+      bindings:
+#        aquí los enlazamos o conectamos
+        producer-out-0:
+          destination: jp-cloud-stream-numbers
+        processor-in-0:
+          destination: jp-cloud-stream-numbers
+        processor-out-0:
+          destination: jp-cloud-stream-squares
+        consumer-in-0:
+          destination: jp-cloud-stream-squares

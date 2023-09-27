@@ -15,7 +15,7 @@ public class SimpleController {
    private StreamBridge streamBridge;
    @PostMapping
    public void postMessage(@RequestBody String message){
-       streamBridge.send("toUpperCase-in-0", message)
+       streamBridge.send("toUpperCase-in-0", message);
 
    }
 }
